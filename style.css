@@ -1,0 +1,72 @@
+/* Page background */
+body {
+  background-color: #c3cfe2;
+}
+
+/* Portfolio grid */
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  width: 100%;
+}
+
+/* Tablet (2 columns) */
+@media (max-width: 800px) {
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile (1 column) */
+@media (max-width: 600px) {
+  .portfolio-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Portfolio item */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button and image fade on hover */
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+.portfolio-item:hover img {
+  opacity: 0.3;
+  transition: 0.3s ease-in-out;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+/* Portfolio content */
+.portfolio-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Read more button */
+.portfolio-content a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
